@@ -12,11 +12,13 @@ public class Main {
         users.add(user1);
         users.add(user2);
         users.add(user3);
-        System.out.println(delete(users));
+        System.out.println(deleteDuplicates(users));
+
     }
-    static Set< User > delete(List<User> usersList){
+    static List< User > deleteDuplicates(List<User> usersList){
         Set<User> userList = new HashSet<User>(usersList);
-       return userList;
+        List<User> users = new ArrayList<>(userList);
+       return users;
     }
 
 }
